@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
         $mail->isHTML(true);
 
         $mail->Subject = filter_input(INPUT_POST, 'sujet', FILTER_SANITIZE_SPECIAL_CHARS);
-        $mail->Body = "Ce message vous a été envoyé via la page contact du site arcadia.com <br> Nom : <strong>{$_POST['name']}</strong> <br> Mail : {$_POST['email']}<br><br>" . $_POST["message"]; // Inclure l'adresse e-mail de l'expéditeur dans le corps du message
+        $mail->Body = "Ce message vous a été envoyé via la page contact du site kmportfolio.com <br> Nom : <strong>{$_POST['name']}</strong> <br> Mail : {$_POST['email']}<br><br>" . $_POST["message"]; // Inclure l'adresse e-mail de l'expéditeur dans le corps du message
 
         // Permet à l'utilisateur de répondre à l'expéditeur directement depuis Gmail
         $mail->addReplyTo($_POST['email']);
